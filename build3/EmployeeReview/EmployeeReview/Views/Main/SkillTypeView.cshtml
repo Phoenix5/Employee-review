@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "SkillTypeView";
+}
+
+<h2>SkillTypeView</h2>
+
+<b>Employee Name:</b>@Session["name"]&nbsp;
+<b>Employee Id:</b>@Session["empid"]
+
+<div id="skilltype" style="text-align:center;border:2px solid #808080;border-radius:30px;width:500px;margin:auto"></div>
+
+
+
+<script lang="ja" type="text/javascript">
+
+    $.ajax({
+        type: "GET",
+        url: "/api/SkillTypes", //URI
+
+        dataType: "json",
+        success: function (data) {
+            debugger;
+            var /*data*/datavalue = data;
+            var myJsonObject = datavalue;
+            contentType: "application/json";
+            $.each(myJsonObject, function (i, mobj) {
+                $("#skilltype").append('<br><form action="SkillType" method="post"><input type="hidden" name="skillType" value="' + mobj.SkillTypeID + '"/><input type="submit" value="' + mobj.SkillTypeName + '" class="btn" style="border:2px solid #808080;border-radius:30px;padding:10px 20px 10px 20px;font-size:30px"/></form><br/>');
+
+            });
+          
+        },
+        error: function (xhr) {
+            alert(xhr.responseText);
+        }
+    });
+</script>
+ @if (Convert.ToBoolean(Session["submit"]))
+ {
+<div  style="text-align:center;border:1px solid #808080;border-radius:0px 0px 30px 30px;margin:auto;width:100px;height:30px;overflow:hidden">
+    @Html.ActionLink("Summary", "Summary")
+</div>
+ }

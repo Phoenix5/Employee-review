@@ -1,0 +1,85 @@
+﻿
+@{
+    ViewBag.Title = "SummaryView";
+}
+
+<h2>SummaryView</h2>
+
+<b>Employee ID:</b>@Session["empid"]
+<div id="ename"></div>
+<div id="emprat">
+
+</div>
+
+<div>
+    @Html.ActionLink("Login", "Index")
+</div>
+
+<script lang="ja" type="text/javascript">
+    var id=@Session["empid"];
+ $.ajax({
+                url: '/api/EmployeeRatings/' + id,
+                type: 'GET',
+                dataType: "json",
+                success: function (data) {
+
+                    var datavalue = data;
+                    var myJsonObject = datavalue;
+
+                    $.each(myJsonObject, function (i, mobj) {
+                       ename( mobj.EmployeeID);
+                        skill(mobj.SkillsID);
+                        rate(mobj.RatingsID);
+                    })
+                },
+                error: function (xhr) {
+                    alert(xhr.responseText);
+                }
+ });
+
+ function skill(id){
+     $.ajax({
+         url: '/api/Skills/' + id,
+         type: 'DeLETE',
+         dataType: "json",
+         async:false,
+         success: function (data) {
+             $("#emprat").append("<b>"+data+"</b>:-");
+         },
+         error: function (xhr) {
+             alert(xhr.responseText);
+         }
+     });
+ }
+
+ function rate(id){
+     $.ajax({
+         url: '/api/Ratings/' + id,
+         type: 'DeLETE',
+         dataType: "json",
+         async:false,
+         success: function (data) {
+             $("#emprat").append(data+"<br/>");
+         },
+         error: function (xhr) {
+             alert(xhr.responseText);
+         }
+     });
+ }
+
+ function ename(id){
+     $.ajax({
+         url: '/api/Employees/' + id,
+         type: 'DeLETE',
+         dataType: "json",
+         async:false,
+         success: function (data) {
+             $("#ename").empty();
+             $("#ename").append("<b>"+data+"</b>");
+         },
+         error: function (xhr) {
+             alert(xhr.responseText);
+         }
+     });
+ }
+</script>
