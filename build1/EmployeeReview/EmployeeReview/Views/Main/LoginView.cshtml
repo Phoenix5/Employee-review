@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "LoginView";
+}
+
+<h2>LoginView</h2>
+
+
+@using(Html.BeginForm("Login","Main",FormMethod.Post,new { @id="form"})){
+
+@Html.TextBox("Name","",new { id="name",@class="form-group"})
+<select id="designations" class="form-group">Designations</select>
+<div id="submit" class="btn"></div>
+}
+<script lang="ja" type="text/javascript">
+
+    $.ajax({
+        type: "GET",
+        url: "/api/Designations", //URI
+
+        dataType: "json",
+        success: function (data) {
+            debugger;
+            var /*data*/datavalue = data;
+            var myJsonObject = datavalue;
+            contentType: "application/json";
+            $.each(myJsonObject, function (i, mobj) {
+                $("#designations").append('<option  value="' + mobj.DesignationID + '">' + mobj.Designation1 + '</option>');
+
+            });
+            $("#submit").append('<input type="submit" onclick="submit()"/>');
+        },
+        error: function (xhr) {
+            alert(xhr.responseText);
+        }
+    });
+
+
+    $("#form").submit(function()
+    {   
+        alert($("#name").val());
+        alert($("#designations").val());
+
+            var task =
+                 {
+                  EmployeeName: $("#name").val(),
+                  DesignationID: $("#designations").val()
+                 };
+
+            $.ajax({
+                type: "POST",
+                data: JSON.stringify(task),
+                url: "/api/Employees",
+                dataType: "json",
+                contentType: "application/json"
+            });
+    });
+</script>

@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "SkillTypeView";
+}
+
+<h2>SkillTypeView</h2>
+
+@Session["test"]
+@Session["name"]
+
+<div id="skilltype"></div>
+
+
+
+<script lang="ja" type="text/javascript">
+
+    $.ajax({
+        type: "GET",
+        url: "/api/SkillTypes", //URI
+
+        dataType: "json",
+        success: function (data) {
+            debugger;
+            var /*data*/datavalue = data;
+            var myJsonObject = datavalue;
+            contentType: "application/json";
+            $.each(myJsonObject, function (i, mobj) {
+                $("#skilltype").append('<form action="SkillType" method="post"><input type="hidden" name="skillType" value="' + mobj.SkillTypeID + '"/><input type="submit" value="' + mobj.SkillTypeName + '"/></form>');
+
+            });
+          
+        },
+        error: function (xhr) {
+            alert(xhr.responseText);
+        }
+    });
+</script>
+
+<div>
+    @Html.ActionLink("Skills", "SkillType")
+</div>
