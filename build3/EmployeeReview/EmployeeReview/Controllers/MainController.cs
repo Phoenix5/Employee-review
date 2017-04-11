@@ -9,13 +9,13 @@ namespace EmployeeReview.Controllers
 {
     public class MainController : Controller
     {
-        DesignationsController apii = new DesignationsController();
+        //DesignationsController apii = new DesignationsController();
         // GET: Main
         public ActionResult Index()
         {
             Session["submit"] = false;
-            ViewBag.designations = new SelectList(apii.GetDesignations(), "DesignationID", "Designation1");
-            Session["test"] = "qqqqqqqqqqqqqqqq";
+          //  ViewBag.designations = new SelectList(apii.GetDesignations(), "DesignationID", "Designation1");
+          //  Session["test"] = "qqqqqqqqqqqqqqqq";
             return View("LoginView");
         }
         
