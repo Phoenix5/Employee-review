@@ -1,0 +1,6 @@
+C:\Users\prathamesh.mashelkar\Documents\Visual Studio 2015\Projects\ConsoleApi\ConsoleTest\bin\Debug\ConsoleTest.exe.config
+C:\Users\prathamesh.mashelkar\Documents\Visual Studio 2015\Projects\ConsoleApi\ConsoleTest\bin\Debug\ConsoleTest.exe
+C:\Users\prathamesh.mashelkar\Documents\Visual Studio 2015\Projects\ConsoleApi\ConsoleTest\bin\Debug\ConsoleTest.pdb
+C:\Users\prathamesh.mashelkar\Documents\Visual Studio 2015\Projects\ConsoleApi\ConsoleTest\obj\Debug\ConsoleTest.csprojResolveAssemblyReference.cache
+C:\Users\prathamesh.mashelkar\Documents\Visual Studio 2015\Projects\ConsoleApi\ConsoleTest\obj\Debug\ConsoleTest.exe
+C:\Users\prathamesh.mashelkar\Documents\Visual Studio 2015\Projects\ConsoleApi\ConsoleTest\obj\Debug\ConsoleTest.pdb
