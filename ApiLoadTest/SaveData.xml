@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SaveData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Path>qqqqqqqqqqqqqqqqq</Path>
+  <HeaderList>E:\test_data_generator\Data.xml</HeaderList>
+  <CommonHeaders>
+    <Headers>
+      <Name>q</Name>
+      <Value>qq</Value>
+    </Headers>
+    <Headers>
+      <Name>a</Name>
+      <Value>aa</Value>
+    </Headers>
+    <Headers>
+      <Name>z</Name>
+      <Value>zz</Value>
+    </Headers>
+    <Headers />
+  </CommonHeaders>
+  <RequestList>
+    <Request>
+      <Url>q</Url>
+      <MethodType>qq</MethodType>
+      <Payload>qqq</Payload>
+      <Headers>
+        <Headers>
+          <Name>qqqq</Name>
+          <Value>qqqq</Value>
+        </Headers>
+      </Headers>
+    </Request>
+    <Request>
+      <Url>a</Url>
+      <MethodType>aa</MethodType>
+      <Payload>aaa</Payload>
+      <Headers>
+        <Headers>
+          <Name>aaaa</Name>
+          <Value>aaaa</Value>
+        </Headers>
+      </Headers>
+    </Request>
+    <Request>
+      <Url>z</Url>
+      <MethodType>zz</MethodType>
+      <Payload>zzz</Payload>
+      <Headers>
+        <Headers>
+          <Name>zzzzz</Name>
+          <Value>zzzzz</Value>
+        </Headers>
+      </Headers>
+    </Request>
+    <Request>
+      <Headers>
+        <Headers />
+      </Headers>
+    </Request>
+  </RequestList>
+</SaveData>

@@ -1,0 +1,93 @@
+<?xml version="1.0" standalone="yes"?>
+<root>
+  <commonheader>
+     <header>
+        <name>Content-Type</name>
+        <value> application/json</value>
+	</header> 
+	<header>
+		<name>Authorization</name>
+		<value> Basic Zjg5ZTY2ZDQtZjhmMi00NDhhLWFmYTUtYjdjMDk0OTNmMTk2OmRjZGFmNDFiLWFmMzctNGRhYy05Y2ZlLThkNTUyMzZmYmY1Zg==</value>
+	</header> 
+	<header>
+		<name>AppVersion</name>
+		<value>2.2.0</value>
+	</header>  
+  </commonheader>
+  <requestlist>
+	<request>
+			<Url>http://auth.bungii.ccigoa:8189/api/customer/login</Url>
+			<Type>post</Type>
+			<Payload>
+			{        
+               "PhoneNo":"9975960644",
+               "Password":"cci12345"
+			}
+			</Payload>
+	</request>
+	<request>
+			<Url>http://bungiinodejs.chapora.ccigoa:8282/api/pickup/request</Url>
+			<Type>post</Type>
+			<Payload>
+			 {
+               
+                "PickupAddress" :   {
+                                        "Address1" : "123" ,
+                                        "Address2" : "",
+                                        "City" : "Overland Park" ,
+                                        "State" : "Kansas" ,
+                                        "Country" : "United States" ,
+                                        "ZipPostalCode" : "66210",
+                                        "Location" : 
+                                        {
+                                            "Latitude" : 36.112352654,
+                                            "Longitude" : -96.112352654
+                                        }
+                                    },
+                "DropOffAddress" :  {
+                                        "Address1" : "456" ,
+                                        "Address2" : "",
+                                        "City" : "Overland Park" ,
+                                        "State" : "Kansas" ,
+                                        "Country" : "United States" ,
+                                        "ZipPostalCode" : "66210",
+                                        "Location" : 
+                                        {
+                                            "Latitude" : 37.112352654,
+                                            "Longitude" : -92.112352654
+                                        }
+                                    }
+            }
+			</Payload>
+			<Headers>
+				<header>
+					<name>AuthorizationToken</name>
+					<value>931D6676-37FF-42F7-8EE2-E09948D2AEB0</value>
+				</header>
+			</Headers>
+	</request>
+	<request>
+			<Url>http://bungiinodejs.chapora.ccigoa:8282/api/pickup/customerconfirmation</Url>
+			<Type>post</Type>
+			<Payload>{
+                "PickupRequestID"
+                804aeb89-fca8-4e29-b0b6-ec0e28511d0c
+                
+                "PaymentMethodID":458jgghd-fca8-4e29-b0b6-ec0e28511d0c
+                
+                "Description":458jgghd-fca8-4e29-b0b6-ec0e28511d0c
+                
+                 "WalletRef":458jgghd-fca8-4e29-b0b6-ec0e28511d0c
+            
+                "ItemImage":filename="IMG_20160312_145151689.jpg"
+               
+            }</Payload>
+			<Headers>
+				<header>
+					<name>AuthorizationToken</name>
+					<value>931D6676-37FF-42F7-8EE2-E09948D2AEB0</value>
+				</header>
+			</Headers>
+	</request>
+	</requestlist>
+</root>
