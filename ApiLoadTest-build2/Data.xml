@@ -1,0 +1,81 @@
+<?xml version="1.0" standalone="yes"?>
+<SaveData xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <CommonHeaders>
+     <Header>
+        <Name>Content-Type</Name>
+        <Value> application/json</Value>
+	</Header> 
+	<Header>
+		<Name>Authorization</Name>
+		<Value> Basic Zjg5ZTY2ZDQtZjhmMi00NDhhLWFmYTUtYjdjMDk0OTNmMTk2OmRjZGFmNDFiLWFmMzctNGRhYy05Y2ZlLThkNTUyMzZmYmY1Zg==</Value>
+	</Header> 
+	<Header>
+		<Name>AppVersion</Name>
+		<Value>2.2.0</Value>
+	</Header>  
+  </CommonHeaders>
+  <RequestList>
+	<Request>
+			<Url>http://auth.bungii.ccigoa:8189/api/customer/login</Url>
+			<MethodType>init</MethodType>
+			<Payload>
+			{        
+               "PhoneNo":"9999999230",
+               "Password":"Cci12345"
+			}
+			</Payload>
+	</Request>
+	<Request>
+			<Url>http://bungiinodejs.chapora.ccigoa:8282/api/pickup/Request</Url>
+			<MethodType>post</MethodType>
+			<Payload>
+			 {
+               
+                "PickupAddress" :   {
+                                        "Address1" : "123" ,
+                                        "Address2" : "",
+                                        "City" : "Overland Park" ,
+                                        "State" : "Kansas" ,
+                                        "Country" : "United States" ,
+                                        "ZipPostalCode" : "66210",
+                                        "Location" : 
+                                        {
+                                            "Latitude" : 36.112352654,
+                                            "Longitude" : -96.112352654
+                                        }
+                                    },
+                "DropOffAddress" :  {
+                                        "Address1" : "456" ,
+                                        "Address2" : "",
+                                        "City" : "Overland Park" ,
+                                        "State" : "Kansas" ,
+                                        "Country" : "United States" ,
+                                        "ZipPostalCode" : "66210",
+                                        "Location" : 
+                                        {
+                                            "Latitude" : 37.112352654,
+                                            "Longitude" : -92.112352654
+                                        }
+                                    }
+            }
+			</Payload>
+	</Request>
+	<Request>
+			<Url>http://bungiinodejs.chapora.ccigoa:8282/api/pickup/customerconfirmation</Url>
+			<MethodType>mult</MethodType>
+			<Payload>{
+                "PickupRequestID":"de2d092d-7c76-c13a-0529-a2c75cede89e",
+                
+                "PaymentMethodID":"2798a8cf-ed0b-4b45-bb9e-9ca0a6c22419",
+                
+                "Description":"458jgghd-fca8-4e29-b0b6-ec0e28511d0c",
+                
+                 "WalletRef":"b74e7a80-d8b6-11e6-9234-010812182330",
+            
+                "ItemImage":"Image"
+               
+            }
+			</Payload>
+	</Request>
+	</RequestList>
+</SaveData>

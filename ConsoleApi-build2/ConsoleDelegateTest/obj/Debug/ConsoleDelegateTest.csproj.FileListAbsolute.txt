@@ -1,0 +1,5 @@
+C:\Users\prathamesh.mashelkar\Documents\Visual Studio 2015\Projects\ConsoleApi\ConsoleDelegateTest\bin\Debug\ConsoleDelegateTest.exe.config
+C:\Users\prathamesh.mashelkar\Documents\Visual Studio 2015\Projects\ConsoleApi\ConsoleDelegateTest\bin\Debug\ConsoleDelegateTest.exe
+C:\Users\prathamesh.mashelkar\Documents\Visual Studio 2015\Projects\ConsoleApi\ConsoleDelegateTest\bin\Debug\ConsoleDelegateTest.pdb
+C:\Users\prathamesh.mashelkar\Documents\Visual Studio 2015\Projects\ConsoleApi\ConsoleDelegateTest\obj\Debug\ConsoleDelegateTest.exe
+C:\Users\prathamesh.mashelkar\Documents\Visual Studio 2015\Projects\ConsoleApi\ConsoleDelegateTest\obj\Debug\ConsoleDelegateTest.pdb

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SaveData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Path>aaaaaaaaaaaaaaaaaaaaa</Path>
+  <HeaderList>E:\test_data_generator\Data.xml</HeaderList>
+  <CommonHeaders>
+    <Headers>
+      <Name>11</Name>
+      <Value>11</Value>
+    </Headers>
+    <Headers>
+      <Name>22</Name>
+      <Value>22</Value>
+    </Headers>
+    <Headers>
+      <Name>33</Name>
+      <Value>33</Value>
+    </Headers>
+  </CommonHeaders>
+  <RequestList>
+    <Request>
+      <Headers />
+    </Request>
+    <Request>
+      <Url>1</Url>
+      <MethodType>1</MethodType>
+      <Payload>1</Payload>
+      <Headers>
+        <Headers />
+      </Headers>
+    </Request>
+    <Request>
+      <Url>11</Url>
+      <MethodType>11</MethodType>
+      <Payload>11</Payload>
+      <Headers>
+        <Headers />
+      </Headers>
+    </Request>
+    <Request>
+      <Url>111</Url>
+      <MethodType>111</MethodType>
+      <Payload>111</Payload>
+      <Headers>
+        <Headers />
+        <Headers />
+      </Headers>
+    </Request>
+  </RequestList>
+</SaveData>
